@@ -44,12 +44,12 @@ body {
 }
 
 #backgroundImage {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   z-index: -1;
   width: 100%;
-  min-height: 110%;
+  height: 100%;
   opacity: 0.35;
 }
 
