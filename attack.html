@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&D Monster Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/00de2a7224.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="images/dragon.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <img id="backgroundImage" src="images/bg.png" />
+    <i class="fa-solid fa-bars" id="openMenu"></i>
+    <div id="sidebar">
+      <i class="fa-solid fa-xmark"></i>
+      <div class="menuBorder"></div>
+      <a class="infoOption" href="index.html">Info</a>
+      <div class="menuBorder"></div>
+      <a class="attackOption" href="attack.html">Attack</a>
+      <div class="menuBorder"></div>
+    </div>
+    <div id="creatureName">
+      Dire Wolf<span id="alignment">Large Beast, Unaligned</span>
+    </div>
+    <div id="hitpoints">HitPoints <span contenteditable="true">37</span></div>
+    <div class="armorClassSpeed">
+      <div class="armorClass">
+        <span contenteditable="true">14</span>Armor Class
+      </div>
+      <div class="speed"><span contenteditable="true">50</span>Speed</div>
+    </div>
+    <div class="stats">
+      <div>
+        <b>STR</b>
+        <div>
+          <span class="abilityScore" contenteditable="true">17</span>
+          <span class="modifier">(+3)</span>
+        </div>
+      </div>
+      <div>
+        <b>DEX</b>
+        <div>
+          <span class="abilityScore" contenteditable="true">15</span>
+          <span class="modifier">(+2)</span>
+        </div>
+      </div>
+      <div>
+        <b>CON</b>
+        <div>
+          <span class="abilityScore" contenteditable="true">15</span>
+          <span class="modifier">(+2)</span>
+        </div>
+      </div>
+      <div>
+        <b>INT</b>
+        <div>
+          <span class="abilityScore" contenteditable="true">3</span>
+          <span class="modifier">(-4)</span>
+        </div>
+      </div>
+      <div>
+        <b>WIS</b>
+        <div>
+          <span class="abilityScore" contenteditable="true">12</span>
+          <span class="modifier">(+1)</span>
+        </div>
+      </div>
+      <div>
+        <b>CHA</b>
+        <div>
+          <span class="abilityScore" contenteditable="true">7</span>
+          <span class="modifier">(-2)</span>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="action">
+        <h1>Actions</h1>
+        <h2>Bite</h2>
+        <div class="actionsBorder"></div>
+        <div>
+          Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6
+          + 3) piercing damage. If the target is a creature, it must succeed on
+          a DC 13 Strength saving throw or be knocked prone.
+        </div>
+      </div>
+    </div>
+    <div class="attackAction">
+      <div class="attackRollContainer">
+        <button><i class="fa-solid fa-dice-d20"></i>Attack</button>
+        <div class="attackRoll"></div>
+      </div>
+      <div class="damageRollContainer">
+        <button><i class="fa-solid fa-dice-d20"></i>Damage</button>
+        <div class="damageRoll"></div>
+      </div>
+    </div>
+  </body>
+</html>
