@@ -10,6 +10,13 @@ openMenuIcon.addEventListener("click", function (e) {
 });
 
 xButton.addEventListener("click", function (e) {
-  sidebar.style.transform = "translateX(-150px)";
+  sidebar.style.transform = "translateX(-100px)";
   openMenuIcon.style.display = "block";
+});
+
+window.addEventListener("click", function (e) {
+  if (e.target != sidebar && e.target != openMenuIcon) {
+    sidebar.style.transform = "translateX(-100px)";
+    openMenuIcon.style.display = "block";
+  }
 });
