@@ -7,35 +7,10 @@ const WOLF_DMG_DICE = 6;
 
 // Wolf attack: 2d6 + 3
 
-const openMenuIcon = document.querySelector("#openMenu");
-const sidebar = document.querySelector("#sidebar");
-const xButton = document.querySelector(".fa-xmark");
-const stats = document.querySelector(".stats");
 const attackBtn = document.querySelector(".attackRollContainer button");
 const attackRoll = document.querySelector(".attackRoll");
 const damageBtn = document.querySelector(".damageRollContainer button");
 const damageRoll = document.querySelector(".damageRoll");
-
-openMenuIcon.addEventListener("click", function (e) {
-  sidebar.style.transform = "translateX(0)";
-  openMenuIcon.style.display = "none";
-});
-
-xButton.addEventListener("click", function (e) {
-  sidebar.style.transform = "translateX(-100px)";
-  openMenuIcon.style.display = "block";
-});
-
-window.addEventListener("click", function (e) {
-  if (e.target != sidebar && e.target != openMenuIcon) {
-    sidebar.style.transform = "translateX(-100px)";
-    openMenuIcon.style.display = "block";
-  }
-});
-
-stats.addEventListener("input", (e) => {
-  getModifier(e.target);
-});
 
 attackBtn.addEventListener("click", function (e) {
   const roll = generateRandomRoll(20);
@@ -51,19 +26,6 @@ damageBtn.addEventListener("click", (e) => {
   damageRoll.textContent = damage;
   changeTextColor(damage, damageRoll);
 });
-
-function getModifier(abilityScoreElement) {
-  let content = abilityScoreElement.textContent;
-  let numericContent = content.replace(/\D/g, "");
-  abilityScoreElement.textContent = numericContent;
-
-  let abilityScore = parseInt(numericContent);
-  let modifier = Math.floor((abilityScore - 10) / 2);
-
-  let modifierSpan =
-    abilityScoreElement.parentElement.querySelector(".modifier");
-  modifierSpan.textContent = `(${modifier >= 0 ? "+" : ""}${modifier})`;
-}
 
 function generateRandomRoll(side) {
   return Math.floor(Math.random() * side) + 1;
