@@ -1,0 +1,271 @@
+@font-face {
+  font-family: lohengrin;
+  src: url("fonts/Lohengrin.ttf");
+}
+
+@font-face {
+  font-family: chance;
+  src: url("fonts/BLKCHCRY.TTF");
+}
+
+@font-face {
+  font-family: mordred;
+  src: url("fonts/Mordred.ttf");
+}
+
+@font-face {
+  font-family: moris;
+  src: url("fonts/MorrisRoman-Black.ttf");
+}
+
+@font-face {
+  font-family: prince;
+  src: url("fonts/PrinceValiant.ttf");
+}
+
+:root {
+  font-size: 16px;
+  --red-color: crimson;
+  --yellow-bg: rgba(143, 116, 43, 0.7);
+  --yellow-bg-opacity: rgba(143, 116, 43, 0.4);
+  --purple-bg: rgb(114, 39, 114, 0.2);
+  --border-bot: rgb(189, 189, 189);
+}
+
+body {
+  min-height: 100vh;
+  background: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#backgroundImage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+}
+
+#openMenu {
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.3rem;
+}
+
+#openMenu:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#sidebar {
+  font-family: chance;
+  font-size: 1.7rem;
+  color: white;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  transform: translateX(-150px);
+  transition: transform 0.3s;
+}
+
+#sidebar i {
+  font-size: 2rem;
+  padding-top: 20px;
+}
+
+#sidebar i:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.menuBorder {
+  content: "";
+  background: white;
+  height: 1px;
+  width: 100%;
+}
+
+#creatureName {
+  font-size: 3rem;
+  font-family: lohengrin;
+  color: white;
+  text-align: center;
+  border-bottom: 1px solid var(--border-bot);
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto 0;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#alignment {
+  font-size: 1.3rem;
+  font-style: italic;
+  opacity: 0.8;
+  font-family: mordred;
+}
+
+#hitpoints {
+  font-family: chance;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 100%;
+  padding: 15px;
+  background: var(--yellow-bg);
+  margin: auto;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+#hitpoints span {
+  width: 100px;
+  outline: none;
+  border: none;
+}
+
+/* #hitpoints span:focus {
+  border: 1px solid black;
+  border-radius: 3px;
+} */
+
+.armorClassSpeed {
+  font-family: mordred;
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  background: var(--yellow-bg-opacity);
+  padding: 20px;
+  border-bottom: 1px solid var(--border-bot);
+}
+
+.armorClassSpeed div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.armorClassSpeed div span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(90, 208, 255);
+}
+
+.stats {
+  background: var(--yellow-bg-opacity);
+  padding: 20px 0;
+  width: 100%;
+  border-bottom: 1px solid var(--border-bot);
+  font-family: mordred;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.stats b {
+  font-size: 1.5rem;
+}
+
+.stats span {
+  font-size: 1.3rem;
+}
+
+.stats > div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skillsContainer {
+  padding: 10px;
+  font-family: mordred;
+  color: white;
+  background: var(--yellow-bg-opacity);
+  border-bottom: 1px solid var(--border-bot);
+}
+
+.skillsContainer h2 {
+  font-family: chance;
+  text-align: center;
+  font-size: 2.2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.skillsContainer > div {
+  font-size: 1.3rem;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.skills > div {
+  padding: 0px 20px;
+}
+
+.passivePerception,
+.challengeRating {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.featuresContainer {
+  font-family: mordred;
+  color: white;
+  background: var(--yellow-bg-opacity);
+  padding-top: 10px;
+  border-bottom: 1px solid var(--border-bot);
+}
+
+.featuresBorder {
+  content: "";
+  background: rgba(255, 255, 255, 0.3);
+  height: 1px;
+  width: 50%;
+  margin: 5px 0;
+}
+
+.feature {
+  margin-bottom: 10px;
+}
